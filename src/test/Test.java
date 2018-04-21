@@ -159,12 +159,15 @@ public class Test {
 		}
 	}
 	public static void main(String args[]) throws InterruptedException {
-		Thread_1 t1 = new Thread_1();
-		Thread_2 t2 = new Thread_2();
-		Thread_3 t3 = new Thread_3();
-		t1.start();
-		t2.start();
-		t3.start();
+		float orig = 0.08f;
+		float end = 0.55f;
+		float multi_v = 0.01f;
+		float ret = 0.0f;
+		int count = 0;
+		for (int ret = orig;ret<end;count++){
+			ret *= multi_v;
+		}
+		System.out.print("次数："+count+";概率：");
 	}
 	
 	/**
